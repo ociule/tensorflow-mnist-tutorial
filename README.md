@@ -10,4 +10,16 @@ Installation instructions [here](INSTALL.txt). The short version is: install Pyt
 
 ---
 
-*Disclaimer: This is not an official Google product but sample code provided for an educational purpose*
+
+### 5 layer vs Convolutional network performance comparison
+
+The convolutional networks are made by replacing fully-connected layers with convolutional layers, one by one.
+The first convolutional network, 3.01, replaces the first fully-connected layer with 
+
+|   Type of network         | File                             | Accuracy |
+|---------------------------|----------------------------------|----------|
+|  5 layer fully-connected  | mnist_1.7_lrdecay_momentum.py    | 0.9755   |
+|  1 convo, 4 layer FC      | mnist_3.01_convo_1layer.py       | 0.9636   |
+|  2 convo, 3 layer FC      | mnist_3.02_convo_1layer.py       |  |
+|  1 convo, 4 layer FC      | mnist_3.01_convo_1layer.py       |  |
+|
