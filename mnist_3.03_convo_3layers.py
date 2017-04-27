@@ -40,17 +40,17 @@ M = 12  # third convolutional layer
 N = 200  # fully connected layer
 
 
-W1 = tf.Variable(tf.truncated_normal([5, 5, 1, K], stddev=stddev))  # 5x5 patch, 1 input channel, K output channels
+W1 = tf.Variable(tf.truncated_normal([5, 5, 1, K], stddev=0.1))  # 5x5 patch, 1 input channel, K output channels
 B1 = tf.Variable(tf.ones([K])/10)
 
-W2 = tf.Variable(tf.truncated_normal([5, 5, K, L], stddev=stddev))
+W2 = tf.Variable(tf.truncated_normal([5, 5, K, L], stddev=0.1))
 B2 = tf.Variable(tf.ones([L])/10)
 
-n3 = 100
+n3 = 60
 W3 = tf.Variable(tf.truncated_normal([7 * 7 * 4 * 8, n3], stddev=stddev))
 B3 = tf.Variable(tf.ones([n3])/10)
 
-n4 = 50
+n4 = 30
 W4 = tf.Variable(tf.truncated_normal([n3, n4], stddev=stddev))
 B4 = tf.Variable(tf.ones([n4])/10)
 
